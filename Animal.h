@@ -20,6 +20,9 @@ protected:
 public:
 	static int count;//משנה את מספר הזהות בצורה סטטית
 	Animal(char* name, char* nickname, float FoodPerDay, int age);//בנאי
+	Animal(char* name, char* nickname, float FoodPerDay);
+	Animal(char* name, char* nickname);
+	Animal(char* name);
 	Animal(const Animal& a);//בנאי מעתיק
 	virtual void eat() = 0;//פונקיצה אבסטרקטית טהורה
 	virtual void sleep() = 0;//פונקיצה אבסטרקטית טהורה

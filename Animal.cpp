@@ -17,6 +17,35 @@ Animal::Animal(char* name, char* nickname, float FoodPerDay, int age) :id(++coun
 	this->age = age;
 
 }
+Animal::Animal(char* name, char* nickname, float FoodPerDay)
+{
+
+	this->name = new char[(strlen(name) + 1)];
+	strcpy(this->name, name);
+	this->nickname = new char[strlen(nickname) + 1];
+	strcpy(this->nickname, nickname);
+	this->FoodPerDay = FoodPerDay;
+
+}
+Animal::Animal(char* name, char* nickname)
+{
+
+	this->name = new char[(strlen(name) + 1)];
+	strcpy(this->name, name);
+	this->nickname = new char[strlen(nickname) + 1];
+	strcpy(this->nickname, nickname);
+	
+
+}
+Animal::Animal(char* name)
+{
+
+	this->name = new char[(strlen(name) + 1)];
+	strcpy(this->name, name);
+	
+	
+
+}
 Animal::Animal(const Animal& a) :id(a.id)
 {
 	this->name = new char[strlen(a.name) + 1];
